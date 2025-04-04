@@ -1,5 +1,5 @@
 import React from 'react';
-import "./App.css";
+import "./landing_page.css";
 import Navigationbar from './components/navbar';
 import flag from "./media/flag.jpg";
 import HorizontalScrollCards from './components/newscard';
