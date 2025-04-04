@@ -1,0 +1,124 @@
+/* HorizontalScrollCards.css */
+
+/* Color Variables */
+:root {
+    --dark-blue: #0D1B2A;
+    --dark-blue-hover: #0a1421;
+    --scrollbar-track: #f8f9fa;
+  }
+  
+  /* Text Colors */
+  .text-dark-blue {
+    color: var(--dark-blue) !important;
+  }
+  
+  /* Background Colors */
+  .bg-dark-blue {
+    background-color: var(--dark-blue) !important;
+  }
+  
+  /* Border Colors */
+  .border-dark-blue {
+    border-color: var(--dark-blue) !important;
+  }
+  
+  /* Button Styles */
+  .btn-dark-blue {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--dark-blue);
+    --bs-btn-border-color: var(--dark-blue);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--dark-blue-hover);
+    --bs-btn-hover-border-color: var(--dark-blue-hover);
+    --bs-btn-focus-shadow-rgb: 13, 27, 42;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--dark-blue-hover);
+    --bs-btn-active-border-color: var(--dark-blue-hover);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--dark-blue);
+    --bs-btn-disabled-border-color: var(--dark-blue);
+  }
+  
+  /* Card Styles */
+  .horizontal-card {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  }
+  
+  .horizontal-card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+  
+  /* See More Card */
+  .see-more-card {
+    background-color: white;
+    border: 2px dashed var(--dark-blue) !important;
+  }
+  
+  /* Scrollbar Styles */
+  .scroll-container {
+    scrollbar-width: thin;
+    scrollbar-color: var(--dark-blue) var(--scrollbar-track);
+  }
+  
+  .scroll-container::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .scroll-container::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 10px;
+  }
+  
+  .scroll-container::-webkit-scrollbar-thumb {
+    background: var(--dark-blue);
+    border-radius: 10px;
+  }
+  
+  .scroll-container::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-blue-hover);
+  }
+  
+  /* Gradient Fade */
+  .gradient-fade {
+    width: 50px;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    pointer-events: none;
+  }
+
+  /* Add these to your newscard.css */
+
+/* See More Button Styles */
+.see-more-button {
+    border: 2px dashed var(--dark-blue) !important;
+    background-color: transparent !important;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .see-more-button:hover {
+    background-color: rgba(13, 27, 42, 0.05) !important;
+    border-style: solid !important;
+  }
+  
+  /* Button Outline Variant */
+  .btn-outline-dark-blue {
+    color: var(--dark-blue);
+    border-color: var(--dark-blue);
+  }
+  
+  .btn-outline-dark-blue:hover {
+    color: white;
+    background-color: var(--dark-blue);
+    border-color: var(--dark-blue);
+  }
+  
+  /* Adjust button content alignment */
+  .see-more-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }

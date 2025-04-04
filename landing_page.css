@@ -1,0 +1,317 @@
+/* Mobile Sidebar Styles */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 280px;
+  height: 100vh;
+  background-color: #343a40;
+  z-index: 1050;
+  transition: left 0.3s ease;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-sidebar.open {
+  left: 0;
+}
+
+.sidebar-header {
+  padding: 1rem;
+  border-bottom: 1px solid #4b545c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-header h5 {
+  color: white;
+  margin: 0;
+}
+
+.sidebar-body {
+  padding: 1rem;
+  overflow-y: auto;
+  height: calc(100% - 60px);
+}
+
+/* Semi-transparent overlay */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+  transition: opacity 0.3s ease;
+}
+
+/* Navbar styling */
+.navbar {
+  padding: 0.5rem 1rem;
+  z-index: 1030;
+}
+
+/* Text color overrides */
+.navbar-brand,
+.nav-link,
+.sidebar-header h5 {
+  color: white !important;
+}
+
+
+/* Ensure content isn't hidden behind navbar */
+.app-container {
+  padding-top: 56px;
+}
+
+/* Desktop nav items */
+@media (min-width: 992px) {
+  .navbar-nav .nav-link {
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-nav .nav-item {
+    margin: 0 0.25rem;
+  }
+}
+
+/* Hover animations for desktop nav items */
+.nav-item-hover {
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+}
+
+.nav-item-hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-item-hover:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item-hover:hover::after {
+  width: 80%;
+}
+
+/* Hover animations for mobile sidebar items */
+.sidebar-item-hover {
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin: 0.25rem 0;
+}
+
+.sidebar-item-hover::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: #fff;
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.sidebar-item-hover:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-left: 1.5rem;
+}
+
+.sidebar-item-hover:hover::before {
+  transform: scaleY(1);
+}
+
+/* Rest of your existing CSS... */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 280px;
+  height: 100vh;
+  background-color: #343a40;
+  z-index: 1050;
+  transition: left 0.3s ease;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ... (keep all your other existing CSS rules) ... */
+
+/* Navbar and Sidebar Styles (from previous implementation) */
+.navbar {
+  padding: 0.5rem 1rem;
+  z-index: 1030;
+}
+
+/* ... (keep all your existing navbar/sidebar CSS) ... */
+
+/* Hero Section Styles */
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('./media/flag.jpg');
+  background-size: cover;
+  background-position: center;
+  padding-top: 56px; /* Account for fixed navbar */
+  position: relative;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.238);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+.hero-divider {
+  width: 100px;
+  height: 4px;
+  background-color: #ffc107;
+  border-radius: 2px;
+}
+
+/* Typography */
+.display-3 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+}
+
+.display-5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+.lead {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.btn-warning {
+  font-weight: 500;
+}
+
+.btn-outline-light:hover {
+  color: #333 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 1.5rem;
+  }
+  
+  .display-3 {
+    font-size: 2.5rem;
+  }
+  
+  .display-5 {
+    font-size: 1.8rem;
+  }
+  
+  .lead {
+    font-size: 1.1rem;
+  }
+}
+
+/* In your CSS file (e.g., LandingPage.css) */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.63); /* Adjust opacity as needed */
+}
+
+.position-relative {
+  position: relative;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+/* App.css additions */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.hero-content {
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    max-width: 100% !important;
+  }
+}
+/* Ensure the overlay covers properly */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Z-index for content */
+.z-index-1 {
+  z-index: 1;
+}
+
+/* Additional padding for mobile */
+@media (max-width: 768px) {
+  .hero-content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* App.css */
+
+/* Logo alignment */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+/* Mobile logo spacing */
+@media (max-width: 992px) {
+  .navbar-brand img {
+    margin-right: 0.5rem;
+  }
+}
+
+/* Desktop logo spacing */
+@media (min-width: 992px) {
+  .navbar-brand img {
+    margin-right: 1rem;
+  }
+}
